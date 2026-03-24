@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram – Connectez-vous pour partager vos moments préférés</title>
+  <meta name="description" content="Créez un compte ou connectez-vous à Instagram pour partager ce qui vous passionne avec vos proches. Accédez à vos photos, vidéos et stories facilement." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Instagram – Connexion" />
+  <meta property="og:description" content="Créez un compte ou connectez-vous à Instagram pour partager ce qui vous passionne avec vos proches." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0064E0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <header role="banner">
+    <nav class="navbar" aria-label="Navigation principale">
+      <div class="navbar-inner">
+        <a href="#" class="navbar-logo" aria-label="Instagram - Accueil">
+          <img src="assets/images/instagram-logo.svg" alt="Logo Instagram" width="36" height="36" />
+          <span class="navbar-logo-text">Instagram</span>
+        </a>
+        <div class="navbar-actions">
+          <button class="btn btn-secondary" data-open-modal="modal-register" aria-label="Créer un compte">
+            Créer un compte
+          </button>
+          <button class="btn btn-primary" data-open-modal="modal-login" aria-label="Se connecter">
+            Se connecter
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-content fade-in-up">
+          <div class="hero-badge" aria-label="Plus d'un milliard d'utilisateurs">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            Plus d'un milliard d'utilisateurs
+          </div>
+
+          <h1 id="hero-title">
+            Connectez-vous à Instagram pour partager vos moments préférés
+          </h1>
+
+          <p>
+            Créez un compte ou connectez-vous à Instagram pour partager ce qui vous passionne avec vos proches. Accédez à vos photos, vidéos et stories facilement.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-lg" data-open-modal="modal-login">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/>
+              </svg>
+              Se connecter
+            </button>
+            <button class="btn btn-secondary btn-lg" data-open-modal="modal-register">
+              Créer un compte
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-bg-circle"></div>
+          <img src="assets/images/phone-mockup.svg"
+               alt="Aperçu de l'interface Instagram sur mobile"
+               width="260"
+               height="520"
+               loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         LOGIN FORM SECTION
+         ============================================ -->
+    <section class="login-section" aria-labelledby="login-section-title">
+      <div class="login-inner">
+        <div class="login-card">
+          <img class="login-logo"
+               src="assets/images/instagram-logo.svg"
+               alt="Instagram"
+               width="56"
+               height="56" />
+          <h2 id="login-section-title">Connexion sécurisée</h2>
+          <p class="subtitle">Utilisez votre numéro de mobile, nom d'utilisateur ou email pour vous connecter en toute sécurité à Instagram.</p>
+
+          <form id="login-form" novalidate aria-label="Formulaire de connexion">
+            <div class="form-group">
+              <label for="identifier">Numéro de mobile, nom d'utilisateur ou email</label>
+              <input
+                class="form-input"
+                type="text"
+                id="identifier"
+                name="identifier"
+                placeholder="Saisissez votre identifiant"
+                autocomplete="username"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Mot de passe</label>
+              <div style="position:relative;">
+                <input
+                  class="form-input"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Saisissez votre mot de passe"
+                  autocomplete="current-password"
+                  required
+                  aria-required="true"
+                  style="padding-right:48px;"
+                />
+                <button
+                  type="button"
+                  data-toggle-password="password"
+                  aria-label="Afficher le mot de passe"
+                  style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;font-size:16px;color:var(--text-light);">
+                  👁
+                </button>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-full" style="margin-top:8px;">
+              Se connecter
+            </button>
+          </form>
+
+          <div class="divider">ou</div>
+
+          <button class="btn btn-facebook btn-lg btn-full" aria-label="Se connecter avec Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Se connecter avec Facebook
+          </button>
+
+          <a href="#" class="forgot-link" data-open-modal="modal-reset">Mot de passe oublié ?</a>
+
+          <div class="login-footer">
+            Vous n'avez pas de compte ?
+            <a href="#" data-open-modal="modal-register">Créer un compte</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         FEATURE CARDS – 3 principales sections
+         ============================================ -->
+    <section class="sections-wrapper" aria-label="Fonctionnalités">
+      <div class="features-grid">
+
+        <!-- Mot de passe oublié -->
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h3>Mot de passe oublié ?</h3>
+          <p>Vous avez oublié votre mot de passe ? Réinitialisez-le rapidement pour retrouver l'accès à votre compte. Un lien de réinitialisation vous sera envoyé par e-mail ou SMS.</p>
+          <button class="btn btn-secondary btn-full" data-open-modal="modal-reset">
+            Réinitialiser le mot de passe
+          </button>
+        </article>
+
+        <!-- Créer un nouveau compte -->
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+              <line x1="12" y1="14" x2="12" y2="20"/>
+              <line x1="9" y1="17" x2="15" y2="17"/>
+            </svg>
+          </div>
+          <h3>Créer un nouveau compte</h3>
+          <p>Nouveau sur Instagram ? Créez un compte pour commencer à partager vos photos et vidéos avec vos amis, votre famille et vos abonnés du monde entier.</p>
+          <button class="btn btn-primary btn-full" data-open-modal="modal-register">
+            Créer un compte
+          </button>
+        </article>
+
+        <!-- Connexion Facebook -->
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="color:var(--primary);">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </div>
+          <h3>Connexion via Facebook</h3>
+          <p>Connectez-vous rapidement avec votre compte Facebook pour accéder à Instagram sans créer un nouveau compte. Simple, rapide et sécurisé.</p>
+          <button class="btn btn-facebook btn-full">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            Se connecter avec Facebook
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         LANGUES DISPONIBLES
+         ============================================ -->
+    <section class="languages-section" aria-labelledby="languages-title">
+      <div class="languages-inner">
+        <div class="section-header">
+          <h2 id="languages-title">Langues disponibles</h2>
+          <p>Instagram est disponible en plusieurs langues pour une expérience personnalisée. Choisissez votre langue préférée.</p>
+        </div>
+
+        <div class="languages-grid" role="list" aria-label="Liste des langues disponibles">
+          <button class="lang-tag active" role="listitem" aria-pressed="true">🇫🇷 Français</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇬🇧 English</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇪🇸 Español</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇩🇪 Deutsch</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇮🇹 Italiano</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇵🇹 Português</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇯🇵 日本語</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇰🇷 한국어</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇨🇳 中文</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇸🇦 العربية</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇷🇺 Русский</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇳🇱 Nederlands</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇵🇱 Polski</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇹🇷 Türkçe</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇮🇩 Bahasa Indonesia</button>
+          <button class="lang-tag" role="listitem" aria-pressed="false">🇧🇷 Português (BR)</button>
+        </div>
+
+        <div style="text-align:center;">
+          <button class="btn btn-primary btn-lg" onclick="showLanguageToast()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            Changer la langue
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         INFORMATIONS & ASSISTANCE
+         ============================================ -->
+    <section class="info-section" aria-labelledby="info-title">
+      <div class="info-inner">
+        <div class="info-grid">
+          <div class="info-content">
+            <h2 id="info-title">Informations et assistance</h2>
+            <p>
+              Découvrez plus sur Instagram, ses politiques, et obtenez de l'aide via les liens vers Meta, le blog, la confidentialité, et bien plus encore. Nous sommes là pour vous accompagner.
+            </p>
+            <div class="info-links">
+              <a href="#" class="info-link" aria-label="À propos de Meta">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                À propos de Meta
+              </a>
+              <a href="#" class="info-link" aria-label="Blog Instagram">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                Blog
+              </a>
+              <a href="#" class="info-link" aria-label="Politique de confidentialité">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Confidentialité
+              </a>
+              <a href="#" class="info-link" aria-label="Conditions d'utilisation">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                Conditions
+              </a>
+              <a href="#" class="info-link" aria-label="Centre d'aide">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Centre d'aide
+              </a>
+              <a href="#" class="info-link" aria-label="Signaler un problème">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                Signaler
+              </a>
+            </div>
+            <div style="margin-top:24px;">
+              <button class="btn btn-primary btn-lg" onclick="document.getElementById('info-title').scrollIntoView({behavior:'smooth'})">
+                En savoir plus
+              </button>
+            </div>
+          </div>
+
+          <div class="info-visual" aria-hidden="true">
+            <div class="info-stats">
+              <div class="stat-card">
+                <div class="stat-number">2B+</div>
+                <div class="stat-label">Utilisateurs actifs</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">100M+</div>
+                <div class="stat-label">Photos partagées / jour</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">500M</div>
+                <div class="stat-label">Stories quotidiennes</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Pays disponibles</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/images/instagram-logo.svg" alt="Instagram" width="28" height="28" />
+        <span class="footer-logo-text">Instagram</span>
+      </div>
+      <nav class="footer-links" aria-label="Liens de pied de page">
+        <a href="#">À propos</a>
+        <a href="#">Blog</a>
+        <a href="#">Emplois</a>
+        <a href="#">Aide</a>
+        <a href="#">API</a>
+        <a href="#">Confidentialité</a>
+        <a href="#">Conditions</a>
+        <a href="#">Emplacements</a>
+        <a href="#">Instagram Lite</a>
+        <a href="#">Threads</a>
+        <a href="#">Importer les contacts et les non-utilisateurs</a>
+        <a href="#">Meta Verified</a>
+      </nav>
+      <div class="footer-bottom">
+        <div class="footer-meta">
+          <span>de</span>
+          <img src="assets/images/meta-logo.svg" alt="Meta" height="16" />
+        </div>
+        <p class="footer-copy">&copy; 2024 Instagram de Meta</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       MODAL – Connexion
+       ============================================ -->
+  <div class="modal-overlay" id="modal-login" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+    <div class="modal">
+      <button class="modal-close" data-close-modal aria-label="Fermer">×</button>
+      <img src="assets/images/instagram-logo.svg" alt="" width="48" height="48" style="margin:0 auto 16px;display:block;" aria-hidden="true" />
+      <h3 id="modal-login-title">Se connecter</h3>
+      <p>Accédez à votre compte Instagram</p>
+      <form id="login-form-modal" novalidate>
+        <div class="form-group">
+          <label for="modal-identifier">Identifiant</label>
+          <input class="form-input" type="text" id="modal-identifier" placeholder="Numéro, nom d'utilisateur ou email" autocomplete="username" />
+        </div>
+        <div class="form-group">
+          <label for="modal-password">Mot de passe</label>
+          <input class="form-input" type="password" id="modal-password" placeholder="Mot de passe" autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-full" style="margin-top:8px;">Se connecter</button>
+      </form>
+      <div class="divider">ou</div>
+      <button class="btn btn-facebook btn-lg btn-full">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Continuer avec Facebook
+      </button>
+      <a href="#" class="forgot-link" data-open-modal="modal-reset" style="margin-top:12px;display:block;">Mot de passe oublié ?</a>
+    </div>
+  </div>
+
+  <!-- ============================================
+       MODAL – Réinitialiser le mot de passe
+       ============================================ -->
+  <div class="modal-overlay" id="modal-reset" role="dialog" aria-modal="true" aria-labelledby="modal-reset-title">
+    <div class="modal">
+      <button class="modal-close" data-close-modal aria-label="Fermer">×</button>
+      <div style="font-size:40px;margin-bottom:16px;" aria-hidden="true">🔐</div>
+      <h3 id="modal-reset-title">Mot de passe oublié ?</h3>
+      <p>Saisissez votre adresse e-mail ou numéro de mobile pour recevoir un lien de réinitialisation.</p>
+      <form id="reset-form" novalidate>
+        <div class="form-group">
+          <label for="reset-email">Email ou numéro de mobile</label>
+          <input class="form-input" type="text" id="reset-email" placeholder="Saisissez votre email ou téléphone" autocomplete="email" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-full" style="margin-top:8px;">Envoyer le lien</button>
+      </form>
+      <button class="btn btn-ghost btn-full" style="margin-top:12px;" data-close-modal>Annuler</button>
+    </div>
+  </div>
+
+  <!-- ============================================
+       MODAL – Créer un compte
+       ============================================ -->
+  <div class="modal-overlay" id="modal-register" role="dialog" aria-modal="true" aria-labelledby="modal-register-title">
+    <div class="modal">
+      <button class="modal-close" data-close-modal aria-label="Fermer">×</button>
+      <img src="assets/images/instagram-logo.svg" alt="" width="48" height="48" style="margin:0 auto 16px;display:block;" aria-hidden="true" />
+      <h3 id="modal-register-title">Créer un compte</h3>
+      <p>Inscrivez-vous pour voir les photos et vidéos de vos amis.</p>
+      <button class="btn btn-facebook btn-lg btn-full" style="margin-bottom:16px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        S'inscrire avec Facebook
+      </button>
+      <div class="divider">ou</div>
+      <form id="register-form" novalidate>
+        <div class="form-group">
+          <label for="reg-mobile">Numéro de mobile ou email</label>
+          <input class="form-input" type="text" id="reg-mobile" placeholder="Numéro de mobile ou email" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="reg-name">Nom complet</label>
+          <input class="form-input" type="text" id="reg-name" placeholder="Nom complet" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="reg-username">Nom d'utilisateur</label>
+          <input class="form-input" type="text" id="reg-username" placeholder="Nom d'utilisateur" autocomplete="username" />
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Mot de passe</label>
+          <input class="form-input" type="password" id="reg-password" placeholder="Mot de passe" autocomplete="new-password" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-full" style="margin-top:8px;">S'inscrire</button>
+      </form>
+      <p style="font-size:12px;color:var(--text-light);margin-top:16px;line-height:1.5;">
+        En vous inscrivant, vous acceptez nos <a href="#" style="color:var(--text-secondary);">Conditions</a> et notre <a href="#" style="color:var(--text-secondary);">Politique de confidentialité</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Modal login form handler
+    document.getElementById('login-form-modal').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const id = document.getElementById('modal-identifier').value.trim();
+      const pw = document.getElementById('modal-password').value;
+      if (!id || !pw) { showToast('Veuillez remplir tous les champs.'); return; }
+      showToast('Connexion en cours…');
+      setTimeout(() => { showToast('Connexion réussie !'); closeModal('modal-login'); }, 1500);
+    });
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      if (el) { el.classList.remove('active'); document.body.style.overflow = ''; }
+    }
+    function showToast(msg) {
+      const t = document.querySelector('.toast');
+      if (t) { t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 3000); }
+    }
+    function showLanguageToast() {
+      const active = document.querySelector('.lang-tag.active');
+      const lang = active ? active.textContent.trim() : 'Français';
+      showToast('Langue sélectionnée : ' + lang);
+    }
+  </script>
+</body>
+</html>

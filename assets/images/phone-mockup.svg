@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 560" width="280" height="560">
+  <defs>
+    <linearGradient id="phone-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#833ab4"/>
+      <stop offset="50%" stop-color="#fd1d1d"/>
+      <stop offset="100%" stop-color="#fcb045"/>
+    </linearGradient>
+    <clipPath id="screen-clip">
+      <rect x="20" y="60" width="240" height="440" rx="4"/>
+    </clipPath>
+  </defs>
+  <!-- Phone body -->
+  <rect x="5" y="5" width="270" height="550" rx="36" ry="36" fill="#1a1a2e" stroke="#333" stroke-width="2"/>
+  <!-- Screen -->
+  <rect x="20" y="60" width="240" height="440" rx="4" fill="#fff"/>
+  <!-- Status bar -->
+  <rect x="20" y="60" width="240" height="30" rx="0" fill="#fafafa"/>
+  <!-- App content -->
+  <rect x="30" y="100" width="220" height="120" rx="8" fill="url(#phone-grad)" opacity="0.9"/>
+  <circle cx="140" cy="160" r="30" fill="none" stroke="#fff" stroke-width="4"/>
+  <circle cx="165" cy="130" r="6" fill="#fff"/>
+  <rect x="106" y="126" width="68" height="68" rx="16" fill="none" stroke="#fff" stroke-width="4"/>
+  <!-- Story circles -->
+  <circle cx="50" cy="255" r="28" fill="none" stroke="url(#phone-grad)" stroke-width="3"/>
+  <circle cx="50" cy="255" r="22" fill="#eee"/>
+  <circle cx="110" cy="255" r="28" fill="none" stroke="url(#phone-grad)" stroke-width="3"/>
+  <circle cx="110" cy="255" r="22" fill="#ddd"/>
+  <circle cx="170" cy="255" r="28" fill="none" stroke="url(#phone-grad)" stroke-width="3"/>
+  <circle cx="170" cy="255" r="22" fill="#e8e8e8"/>
+  <circle cx="230" cy="255" r="28" fill="none" stroke="#ccc" stroke-width="3"/>
+  <circle cx="230" cy="255" r="22" fill="#f0f0f0"/>
+  <!-- Post placeholder -->
+  <rect x="30" y="300" width="220" height="150" rx="4" fill="#f0f0f0"/>
+  <line x1="30" y1="300" x2="250" y2="450" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="250" y1="300" x2="30" y2="450" stroke="#e0e0e0" stroke-width="1"/>
+  <circle cx="140" cy="375" r="20" fill="#d0d0d0"/>
+  <!-- Like/comment bar -->
+  <rect x="30" y="460" width="220" height="2" fill="#efefef"/>
+  <rect x="30" y="470" width="60" height="10" rx="3" fill="#e0e0e0"/>
+  <rect x="30" y="485" width="140" height="8" rx="3" fill="#efefef"/>
+  <!-- Home indicator -->
+  <rect x="105" y="530" width="70" height="4" rx="2" fill="#555"/>
+  <!-- Notch -->
+  <rect x="100" y="18" width="80" height="20" rx="10" fill="#1a1a2e"/>
+</svg>
